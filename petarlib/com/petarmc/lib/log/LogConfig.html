@@ -105,34 +105,39 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Field</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color"><code>static <a href="LogLevel.html" title="enum class in com.petarmc.lib.log">LogLevel</a></code></div>
-<div class="col-second even-row-color"><code><a href="#globalLevel" class="member-name-link">globalLevel</a></code></div>
+<div class="col-first even-row-color"><code>static boolean</code></div>
+<div class="col-second even-row-color"><code><a href="#enforceLevel" class="member-name-link">enforceLevel</a></code></div>
 <div class="col-last even-row-color">
+<div class="block">If true, log messages will be filtered based on the global log level.</div>
+</div>
+<div class="col-first odd-row-color"><code>static <a href="LogLevel.html" title="enum class in com.petarmc.lib.log">LogLevel</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#globalLevel" class="member-name-link">globalLevel</a></code></div>
+<div class="col-last odd-row-color">
 <div class="block">The global log level.</div>
 </div>
-<div class="col-first odd-row-color"><code>static <a href="https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color"><code><a href="#globalPrefix" class="member-name-link">globalPrefix</a></code></div>
-<div class="col-last odd-row-color">
+<div class="col-first even-row-color"><code>static <a href="https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color"><code><a href="#globalPrefix" class="member-name-link">globalPrefix</a></code></div>
+<div class="col-last even-row-color">
 <div class="block">A prefix to add to every log message, e.g., "[MyMod]".</div>
 </div>
-<div class="col-first even-row-color"><code>static boolean</code></div>
-<div class="col-second even-row-color"><code><a href="#includeThread" class="member-name-link">includeThread</a></code></div>
-<div class="col-last even-row-color">
+<div class="col-first odd-row-color"><code>static boolean</code></div>
+<div class="col-second odd-row-color"><code><a href="#includeThread" class="member-name-link">includeThread</a></code></div>
+<div class="col-last odd-row-color">
 <div class="block">If true, the current thread name will be included in log messages.</div>
 </div>
-<div class="col-first odd-row-color"><code>static boolean</code></div>
-<div class="col-second odd-row-color"><code><a href="#includeTimestamp" class="member-name-link">includeTimestamp</a></code></div>
-<div class="col-last odd-row-color">
+<div class="col-first even-row-color"><code>static boolean</code></div>
+<div class="col-second even-row-color"><code><a href="#includeTimestamp" class="member-name-link">includeTimestamp</a></code></div>
+<div class="col-last even-row-color">
 <div class="block">If true, timestamps will be included in log messages.</div>
 </div>
-<div class="col-first even-row-color"><code>static <a href="https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color"><code><a href="#logFilePath" class="member-name-link">logFilePath</a></code></div>
-<div class="col-last even-row-color">
+<div class="col-first odd-row-color"><code>static <a href="https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#logFilePath" class="member-name-link">logFilePath</a></code></div>
+<div class="col-last odd-row-color">
 <div class="block">The path of the log file when <a href="#logToFile"><code>logToFile</code></a> is true.</div>
 </div>
-<div class="col-first odd-row-color"><code>static boolean</code></div>
-<div class="col-second odd-row-color"><code><a href="#logToFile" class="member-name-link">logToFile</a></code></div>
-<div class="col-last odd-row-color">
+<div class="col-first even-row-color"><code>static boolean</code></div>
+<div class="col-second even-row-color"><code><a href="#logToFile" class="member-name-link">logToFile</a></code></div>
+<div class="col-last even-row-color">
 <div class="block">If true, log messages will also be written to a file.</div>
 </div>
 </div>
@@ -175,7 +180,7 @@ loadScripts(document, 'script');</script>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="LogLevel.html" title="enum class in com.petarmc.lib.log">LogLevel</a></span>&nbsp;<span class="element-name">globalLevel</span></div>
 <div class="block">The global log level.
- Messages below this level will be ignored.
+ Messages below this level will be ignored if <a href="#enforceLevel"><code>enforceLevel</code></a> is true.
  Default is <a href="LogLevel.html#INFO"><code>LogLevel.INFO</code></a>.</div>
 </div>
 </section>
@@ -227,6 +232,17 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">includeThread</span></div>
 <div class="block">If true, the current thread name will be included in log messages.
  Default is false.</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="enforceLevel">
+<h3>enforceLevel</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">enforceLevel</span></div>
+<div class="block">If true, log messages will be filtered based on the global log level.
+ If false, all messages will be logged regardless of level.
+ Default is true.</div>
 </div>
 </section>
 </li>

@@ -298,7 +298,7 @@ implements <a href="PLogger.html" title="interface in com.petarmc.lib.log">PLogg
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">info</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;msg)</span></div>
 <div class="block">Logs an info-level message.
- Ignored if the global log level is higher than INFO.</div>
+ Ignored if <a href="LogConfig.html#enforceLevel"><code>LogConfig.enforceLevel</code></a> is true and the global log level is higher than INFO.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="PLogger.html#info(java.lang.String)">info</a></code>&nbsp;in interface&nbsp;<code><a href="PLogger.html" title="interface in com.petarmc.lib.log">PLogger</a></code></dd>
