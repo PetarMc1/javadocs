@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html","k":"18"},{"l":"com.petarmc.petarlib"},{"l":"com.petarmc.petarlib.chat"},{"l":"com.petarmc.petarlib.log"},{"l":"com.petarmc.petarlib.net"},{"l":"com.petarmc.petarlib.notification"},{"l":"com.petarmc.petarlib.task"}];updateSearchResults();
