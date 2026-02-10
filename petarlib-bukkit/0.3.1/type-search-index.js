@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"com.petarmc.petarlib.net","l":"HttpClientWrapper"},{"p":"com.petarmc.petarlib.net","l":"HttpResponse"},{"p":"com.petarmc.petarlib.notifications","l":"NotificationManager"},{"p":"com.petarmc.petarlib.task","l":"TaskScheduler"}];updateSearchResults();
